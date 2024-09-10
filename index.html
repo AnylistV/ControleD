@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Controle de Gastos</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Controle de Gastos</h1>
+      <div class="total-expenses">
+        Despesa Total: <span id="total-expenses">R$0</span>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Adicionar Despesa</h2>
+        <form id="expense-form">
+          <div class="form-group">
+            <label for="expense-amount">Valor:</label>
+            <input type="number" id="expense-amount" name="expense-amount" required>
+          </div>
+          <div class="form-group">
+            <label for="expense-category">Categoria:</label>
+            <select id="expense-category" name="expense-category" required>
+              <option value="">Selecione uma categoria</option>
+              <option value="food">Comida</option>
+              <option value="transportation">Transporte</option>
+              <option value="entertainment">Entretenimento</option>
+              <option value="housing">Casa</option>
+              <option value="other">Outros</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="expense-date">Data:</label>
+            <input type="date" id="expense-date" name="expense-date" required>
+          </div>
+          <div class="form-group">
+            <label for="expense-description">Descrição (opcional):</label>
+            <textarea id="expense-description" name="expense-description"></textarea>
+          </div>
+          <button type="submit">Adicionar Despesa</button>
+        </form>
+      </section>
+
+      <section>
+        <h2>Lista de Despesas</h2>
+        <div class="expense-list-container">
+          <table id="expense-table">
+            <thead>
+              <tr>
+                <th>Valor</th>
+                <th>Categoria</th>
+                <th>Data</th>
+                <th>Descrição</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+            <tbody id="expense-table-body">
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="java/script.js"></script>
+</body>
+</html>
